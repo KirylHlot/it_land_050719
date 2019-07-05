@@ -1,0 +1,1581 @@
+@import "vars"
+@import "fonts"
+@import "libs"
+
+::placeholder
+	color: #666
+
+::selection
+	background-color: $red
+	color: #fff
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video
+	margin: 0
+	padding: 0
+	border: 0
+	font-size: 100%
+	font: inherit
+	vertical-align: baseline
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section
+	display: block
+
+ol, ul
+	list-style: none
+
+table
+	border-collapse: collapse
+	border-spacing: 0
+
+a
+	color: inherit
+	&:hover
+		color: inherit
+		text-decoration: none
+
+.text_blue
+	color: #75BAEA
+
+input
+	&[type="number"]
+		&::-webkit-outer-spin-button, &::-webkit-inner-spin-button
+			-webkit-appearance: none
+			margin: 0
+		-moz-appearance: textfield
+		&:hover, &:focus
+			-moz-appearance: number-input
+	&[type=number]
+		&::-webkit-inner-spin-button, &::-webkit-outer-spin-button
+			-webkit-appearance: none
+			margin: 0
+
+
+.button
+	width: 200px
+	height: 48px
+	background: #0088CC
+	border-radius: 12px 0
+	border: none
+	font-size: 14px
+	text-transform: uppercase
+	color: $white
+	display: flex
+	justify-content: center
+	align-items: center
+	outline: none
+	cursor: pointer
+	transition: background .3s
+	&:focus
+		outline: none
+	&:hover
+		background: #75BAEA
+
+///////////////end reset
+
+body
+	font-size: 16px
+	height: 100%
+	width: 100%
+	position: relative
+	line-height: normal
+	overflow-x: hidden
+	font-family: $default-font
+	color: $color
+
+section, header
+	height: auto
+	position: relative
+	z-index: 10
+
+
+
+
+.header
+	width: 100%
+	min-height: 100vh
+	background-color: #222
+	color: $white
+	padding-bottom: 36px
+	overflow-x: hidden
+	.cloud_top
+		position: absolute
+		top: -20px
+		right: 50%
+		margin-right: -815px
+		z-index: 1
+	.hat
+		height: 160px
+		width: 70%
+		margin: auto
+		display: flex
+		flex-direction: row
+		justify-content: space-between
+		padding-top: 24px
+		margin-bottom: 15px
+		position: relative
+		z-index: 2
+		.left_part
+			width: 44%
+			display: flex
+			justify-content: space-between
+			flex-direction: row
+			.logo_wrapper
+				img
+			.slogan
+				font-weight: bold
+				font-size: 16px
+				line-height: 22px
+				text-align: center
+		.right_part
+			width: 44%
+			display: flex
+			justify-content: space-between
+			flex-direction: row
+			.left_wrapper
+				.adress
+					font-size: 14px
+					line-height: 22px
+					margin-bottom: 16px
+				.socline
+					display: flex
+					justify-content: center
+					align-items: center
+					flex-direction: row
+					li
+						margin-right: 16px
+						&:last-child
+							margin-right: 0
+						a
+							img
+								&:hover
+									background-color: rgba(#75BAEA, .7)
+									border-radius: 6px
+			.right_wrapper
+				display: flex
+				flex-direction: column
+				align-items: center
+				.phone
+					font-weight: bold
+					font-size: 18px
+					line-height: 22px
+					margin-bottom: 20px
+				.button
+					width: 212px
+					height: 48px
+					border: 1px solid #FFFFFF
+					box-sizing: border-box
+					border-radius: 4px
+					position: relative
+					display: flex
+					justify-content: center
+					align-items: center
+					cursor: pointer
+					background-color: transparent
+					&:after
+					  content: ""
+					  position: absolute
+					  height: 36px
+					  width: 1px
+					  background: #3e3b3b
+					  right: -1px
+					  top: 50%
+					  margin-top: -18px
+					  transform: translateY(0)
+					  z-index: 1
+					.phone_in_button
+						position: absolute
+						right: -24px
+						top: 50%
+						margin-top: -12px
+						z-index: 2
+	.content
+		width: 70%
+		margin: auto
+		position: relative
+		z-index: 2
+		.h1Wrapper
+			font-weight: bold
+			font-size: 55px
+			line-height: 76px
+			text-align: center
+			margin-bottom: 12px
+		.h1desc
+			font-weight: bold
+			font-size: 20px
+			line-height: 32px
+			letter-spacing: 0.05em
+			text-align: center
+			margin-bottom: 24px
+		.center_wrapper
+			width: 100%
+			display: flex
+			flex-direction: row
+			align-items: center
+			justify-content: space-between
+			.left_column
+				width: 30%
+				position: relative
+				z-index: 2
+				.title
+					font-weight: bold
+					font-size: 16px
+					line-height: 28px
+					letter-spacing: 1px
+					text-transform: uppercase
+					margin-bottom: 22px
+				ul
+					li
+						position: relative
+						margin-bottom: 24px
+						.title_item_wrapper
+							position: relative
+							display: flex
+							align-items: center
+							width: 75%
+							height: 46px
+							font-weight: bold
+							font-size: 16px
+							line-height: 28px
+							letter-spacing: 1px
+							margin-bottom: 4px
+							padding-left: 38px
+							background: transparent
+							z-index: 2
+							border-bottom: 2px solid rgba(245, 245, 245, 0.25)
+							&:after
+								content: ""
+								width: 36px
+								height: 36px
+								right: -12px
+								top: 50%
+								margin-top: -17px
+								border-radius: 6px
+								position: absolute
+								background-color: transparent
+								transform: rotate(45deg)
+								z-index: 1
+							&:hover
+								background: #F5F5F5
+								color: #222
+								border-radius: 6px
+								border-color: transparent
+								&:after
+									background-color: #F5F5F5
+								.number
+									background-color: #E8E9ED
+									color: #9FA3A7
+							.number
+								width: 16px
+								height: 16px
+								border-radius: 50%
+								background-color: $yellow
+								color: #212121
+								display: flex
+								justify-content: center
+								align-items: center
+								margin-right: 13px
+								position: absolute
+								left: 16px
+							.title_item
+								white-space: nowrap
+								position: relative
+								z-index: 2
+						.description
+							font-size: 14px
+							line-height: 16px
+							width: 80%
+			.center_column
+				width: 35%
+				position: relative
+				height: 100%
+				z-index: 1
+				.img_wrapper
+					width: 100%
+					height: 100%
+					display: flex
+					justify-content: center
+					align-items: center
+					z-index: 1
+					position: relative
+					img
+						position: absolute
+						top: 50%
+						margin-top: -160px
+						right: 58%
+						margin-right: -273px
+				.yellow_line
+					position: relative
+					z-index: 2
+					width: 114px
+					height: 4px
+					background: $yellow
+					right: -39px
+					margin-left: auto
+					&:after
+						content: ""
+						display: inline-block
+						width: 10px
+						height: 10px
+						border-radius: 50%
+						background-color: $yellow
+						position: absolute
+						right: 0
+						top: 50%
+						margin-top: -5px
+			.right_column
+				width: 30%
+				position: relative
+				z-index: 2
+				.right_column_wrapper
+					font-size: 16px
+					line-height: 28px
+					text-align: center
+					letter-spacing: 1px
+					width: 100%
+					height: auto
+					background: rgba(196, 196, 196, 0.05)
+					border: 1px solid rgba(229, 229, 229, 0.25)
+					box-sizing: border-box
+					border-radius: 8px
+					padding: 26px 8px
+	.header_form_wrapper
+		width: 70%
+		margin: auto
+		text-align: center
+		.title
+			font-weight: bold
+			font-size: 20px
+			line-height: 32px
+			text-align: center
+			letter-spacing: 0.05em
+			color: $yellow
+			margin-bottom: 4px
+		.description
+			font-size: 14px
+			line-height: 16px
+			margin-bottom: 24px
+		.header_form
+			width: 80%
+			margin: auto
+			.form_content
+				display: flex
+				flex-direction: row
+				align-items: center
+				justify-content: space-between
+				.input_wrapper
+					display: flex
+					flex-direction: row
+					align-items: center
+					justify-content: center
+					position: relative
+					overflow: hidden
+					&.input_accept
+						.wrong
+							right: -50px
+						.accept
+							right: 0
+						input
+							border-bottom: 1px solid green
+					input
+						width: 320px
+						height: 45px
+						border: none
+						border-bottom: 1px solid $white
+						background-color: transparent
+						outline: none
+						color: $white
+						position: relative
+						&::placeholder
+							color: #979797
+					.wrong
+						position: absolute
+						right: 4px
+						top: 50%
+						margin-top: -5px
+						transition: right .5s ease-in
+					.accept
+						position: absolute
+						right: -50px
+						top: 50%
+						margin-top: -5px
+						transition: right .5s ease-in
+				.button
+
+.need
+	background-color: #130F29
+	padding: 50px 0 26px
+	color: $white
+	.need_wrapper
+		width: 65%
+		margin: auto
+		position: relative
+		z-index: 2
+		.section_title
+			font-weight: bold
+			font-size: 55px
+			line-height: 76px
+			text-align: center
+			margin-bottom: 24px
+		.content_wrapper
+			font-size: 16px
+			line-height: 24px
+			text-align: center
+			letter-spacing: 0.05em
+			margin-bottom: 64px
+			.title
+				color: #75BAEA
+				font-weight: bold
+		.owl-dots
+			display: flex
+			flex-direction: row
+			align-items: center
+			justify-content: space-around
+			flex-wrap: wrap
+			margin-bottom: 16px
+			.owl-dot
+				font-size: 18px
+				line-height: 16px
+				text-decoration-line: underline
+				text-decoration: underline
+				margin-right: 26px
+				margin-bottom: 32px
+				cursor: pointer
+				&.active
+					text-decoration: none	
+					color: #FFC80A
+				&:hover
+					text-decoration: none	
+					color: #FFC80A
+				&:last-child
+					margin-right: 0
+		.need_carousel
+			margin-bottom: 32px
+			.need_carousel_item
+				position: relative
+				width: 100%
+				height: auto
+				display: flex
+				flex-direction: row
+				align-items: center
+				justify-content: space-between
+				padding: 0 16px
+			.left_part
+				width: 30%
+				height: auto
+				.left_img_wrapper
+					width: 100%
+					height: auto
+					img
+			.right_part
+				width: 60%
+				.title
+					font-weight: bold
+					font-size: 36px
+					color: #FFC80A
+					margin-bottom: 32px
+				.content
+					font-size: 16px
+					line-height: 24px
+					letter-spacing: 0.05em
+					margin-bottom: 40px
+				.need_button
+					width: 326px
+					height: 48px
+					background: #0088CC
+					border-radius: 12px 0
+					display: flex
+					justify-content: center
+					align-items: center
+					cursor: pointer
+					text-transform: uppercase
+					font-size: 14px
+					text-transform: uppercase
+					transition: all .3s
+					&:hover
+						background: #75BAEA
+		.carousel_arrow_wrapper
+			width: 30%
+			height: auto
+			display: flex
+			flex-direction: row
+			align-items: center
+			justify-content: center
+			margin-bottom: 220px
+			.left_arrow
+				margin-right: 36px
+				padding: 16px 0
+				cursor: pointer
+			.right_arrow
+				padding: 16px 0
+				cursor: pointer
+		.section_description
+			padding: 58px 36px 28px
+			background: #130F28
+			box-shadow: 5px 5px 50px rgba(39, 66, 212, 0.15)
+			border-radius: 16px
+			font-weight: bold
+			font-size: 36px
+			line-height: 56px
+			text-align: center
+			margin-bottom: 50px
+		.section_button
+			width: 368px
+			height: 48px
+			background: #0088CC
+			box-shadow: 5px 5px 50px rgba(39, 66, 212, 0.15)
+			display: flex
+			justify-content: center
+			align-items: center
+			font-size: 14px
+			line-height: 18px
+			text-transform: uppercase
+			border-radius: 16px 0
+			margin: 0 auto
+			cursor: pointer
+			transition: all .3s
+			&:hover
+				background: #75BAEA
+	.money_wrapper
+		position: absolute
+		bottom: -10%
+		left: 0
+		z-index: 1
+		width: 100%
+		height: auto
+		overflow: hidden
+
+.advantages
+	background-color: #f0f2f7
+	padding: 120px 0 36px
+	color: #222222
+	z-index: 9
+	overflow: hidden
+	.advantages_wrapper
+		width: 65%
+		margin: auto
+		position: relative
+		.section_title
+			font-weight: bold
+			font-size: 55px
+			line-height: 76px
+			text-align: center
+			margin-bottom: 30px
+		.content_wrapper
+			display: flex
+			flex-direction: row
+			align-items: center
+			.advantage_galary_dots
+				width: 30%
+				.advantage_galary_dot
+					width: 100%
+					height: 70px
+					border-bottom: 2px solid rgba(151, 151, 151, 0.25)
+					display: flex
+					align-items: center
+					color: #adaeaf
+					cursor: pointer
+					&.active
+						color: #222222
+						&:before
+							content: ""
+							display: inline-block
+							width: 8px
+							height: 8px
+							border-radius: 50%
+							background-color: #FFC80A
+							margin: 0 12px
+					&:hover
+						color: #222222
+						&:before
+							content: ""
+							display: inline-block
+							width: 8px
+							height: 8px
+							border-radius: 50%
+							background-color: #FFC80A
+							margin: 0 12px
+			.right_column
+				width: 70%
+				position: relative
+				.advantages_carousel
+					width: 100%
+					height: 100%
+					position: relative
+					margin-bottom: 50px
+					.advantages_carousel_item
+						height: 100%
+						width: 100%
+						display: flex
+						flex-direction: row
+						align-items: center
+						justify-content: space-between
+						.advantages_carousel_img_wrapper
+							width: 43%
+							height: 100%
+							height: auto
+							img
+								width: 100%
+								height: auto
+						.advantages_carousel_content_wrapper
+							width: 55%
+							display: flex
+							flex-direction: column
+							align-items: flex-start
+							justify-content: flex-start
+							.title
+								font-weight: bold
+								font-size: 28px
+								line-height: 40px
+								color: #0088CC
+								margin-bottom: 16px
+							.description
+								font-size: 18px
+								line-height: 24px
+								margin-bottom: 20px
+							.table_title
+								font-weight: bold
+								font-size: 18px
+								line-height: 24px
+								text-align: center
+								margin-bottom: 20px
+								color: #0088CC
+								width: 100%
+							.item_table
+								width: 100%
+								height: auto
+								li
+									font-size: 14px
+									line-height: 18px
+									color: #4F5052
+									display: flex
+									flex-direction: row
+									align-items: center
+									.left_text
+										width: 50%
+									.right_text
+										width: 50%
+				.advantages_carousel_nav
+					position: absolute
+					bottom: 0
+					left: 0
+					width: 43%
+					height: 70px
+					display: flex
+					justify-content: center
+					align-items: center
+					.advantages_ar_left
+						margin-right: 32px
+						padding: 16px 0
+						cursor: pointer
+						img
+					.advantages_ar_right
+						padding: 16px 0
+						cursor: pointer
+						img
+		.advantage_bottom_block
+			width: 80%
+			margin: auto
+			background: #75BAEA
+			box-shadow: 5px 5px 50px rgba(39, 66, 212, 0.15)
+			border-radius: 0 16px
+			padding: 24px 46px
+			position: relative
+			.title
+				font-weight: bold
+				font-size: 36px
+				line-height: 56px
+				text-align: center
+				color: #FFFFFF
+				margin-bottom: 18px
+			.advantage_button
+				margin: auto
+				width: 434px
+				height: 48px
+				background: #F9593A
+				box-shadow: 5px 5px 50px rgba(39, 66, 212, 0.15)
+		.clock
+			position: absolute
+			bottom: 0
+			right: -200px
+
+.advantage_button
+	width: 326px
+	height: 48px
+	background: #0088CC
+	box-shadow: 5px 5px 50px rgba(39, 66, 212, 0.15)
+	font-family: Raleway;
+	font-size: 14px
+	text-align: center
+	text-transform: uppercase
+	color: #FFFFFF
+	border-radius: 12px 0
+	display: flex
+	justify-content: center
+	align-items: center
+	margin-left: auto
+	margin-right: 12.5%
+	cursor: pointer
+	margin-bottom: 140px
+	transition: all .3s
+	&:hover
+		background: #75BAEA
+.how
+	padding: 52px 0
+	color: #171717
+	z-index: 15
+	.how_wrapper
+		width: 65%
+		margin: auto
+		position: relative
+		z-index: 2
+		.h2title
+			font-weight: bold
+			font-size: 55px
+			line-height: 76px
+			text-align: center
+			margin-bottom: 32px
+		.description
+			font-size: 16px
+			line-height: 24px
+			text-align: center
+			letter-spacing: 0.05em
+			margin-bottom: 50px
+			.text_blue
+				font-weight: bold
+		.how_item
+			width: 100%
+			height: auto
+			display: flex
+			flex-direction: row
+			justify-content: space-between
+			.right_column
+				width: 30%
+				position: relative
+				overflow: hidden
+				img
+					width: 100%
+					height: auto
+					position: relative
+					right: -100%
+					transition: all .5s ease-in-out
+					&.show_img
+						right: 0
+			.left_column
+				width: 65%
+				position: relative
+				.title
+					font-weight: bold
+					font-size: 36px
+					line-height: 56px
+					text-transform: uppercase
+					color: #0088CC
+					margin-bottom: 16px
+				.desc
+					font-size: 16px
+					line-height: 24px
+					letter-spacing: 0.05em
+					margin-bottom: 42px
+				.create_line
+					display: flex
+					flex-direction: row
+					align-items: center
+					margin-bottom: 32px
+					li
+						width: 50%
+						display: flex
+						flex-direction: row
+						align-items: center
+					.icon_wrapper
+						margin-right: 16px
+						width: auto
+						height: auto
+						img
+					.desc
+						margin-bottom: 0
+			.bottom_items
+				width: 100%
+				height: auto
+				display: flex
+				flex-direction: row
+				justify-content: space-between
+				li
+					position: relative
+					width: 30%
+					.icon_wrapper
+						position: absolute
+						left: 0
+						top: 0
+						display: flex
+						justify-content: flex-start
+						align-items: flex-start
+						img
+							width: 100%
+							height: auto
+				.title
+					font-style: normal
+					font-weight: bold
+					font-size: 16px
+					line-height: 24px
+					text-align: center
+					letter-spacing: 0.05em
+					color: #0088CC
+					margin-bottom: 8px
+				.desc
+					font-style: normal
+					font-weight: normal
+					font-size: 14px
+					line-height: 18px
+					text-align: center
+					letter-spacing: 0.05em
+					color: #171717
+			.column_number
+				position: absolute
+				left: -140px
+				top: 10%
+				margin-top: -40px
+				margin-top:   
+				font-weight: bold
+				font-size: 500px
+				line-height: 76px
+				color: rgba(117, 186, 234, 0.1)    
+		.button
+			width: 326px
+			height: 48px
+			box-shadow: 5px 5px 50px rgba(39, 66, 212, 0.15)
+			margin: 0 auto 90px
+
+.bottom_block
+	width: 80%
+	margin: auto
+	height: auto
+	padding: 24px 32px 32px
+	background: #FFC80A
+	box-shadow: 5px 5px 50px rgba(39, 66, 212, 0.15)
+	border-radius: 0 16px
+	.title
+		font-weight: bold
+		font-size: 36px
+		line-height: 56px
+		text-align: center
+		color: #FFFFFF
+		margin-bottom: 16px
+	.button
+		background: #75BAEA
+		box-shadow: 5px 5px 50px rgba(39, 66, 212, 0.15)
+		width: 434px !important
+		height: 48px
+		display: flex
+		justify-content: center
+		align-items: center
+		margin-bottom: 0 !important
+
+.airoplane_wrapper
+	position: absolute
+	bottom: -10%
+	left: 0
+	right: 0
+	overflow: hidden
+	background-color: transparent
+
+
+.kontext
+	background-color: #130F28
+	padding-top: 100px
+	color: $white
+	overflow: hidden
+	.kontext_wrapper
+		width: 65%
+		margin: auto
+		position: relative
+		.h2title
+			font-weight: bold
+			font-size: 55px
+			line-height: 76px
+			text-align: center
+			margin-bottom: 32px
+		.description
+			font-size: 16px
+			line-height: 24px
+			text-align: center
+			letter-spacing: 0.05em
+			margin-bottom: 32px
+		.quote_block
+			width: 100%
+			display: flex
+			flex-direction: row
+			margin-bottom: 52px
+			position: relative
+			padding-left: 15%
+			.quote_img_wrapper
+				position: absolute
+				left: 0
+				top: 0
+				.quote
+			.desc
+				.title
+					font-weight: bold
+					font-size: 36px
+					line-height: 56px
+					text-transform: uppercase
+					color: #FFC80A
+					margin-top: 100px
+					margin-bottom: 16px
+				.description
+					margin-bottom: 0
+					text-align: left
+		.vide_wrapper
+			width: 100%
+			height: auto
+			text-align: center
+			margin-bottom: 133px
+			iframe
+				width: 790px
+				height: 440px
+				margin: auto
+
+	.bottom_block_wrapper
+		display: flex
+		flex-direction: row
+		justify-content: center
+		align-items: center
+		width: 100%
+		padding: 24px 10%
+		margin: auto
+		background-color: $black
+		.left_hand
+		.bottom_block
+			background: #75BAEA
+			box-shadow: 5px 5px 50px rgba(39, 66, 212, 0.15)
+			border-radius: 16px
+			.title
+			.button
+				width: auto
+				background: #F9593A
+				box-shadow: 5px 5px 50px rgba(39, 66, 212, 0.15)
+				margin: auto
+				b
+					font-weight: bold
+					margin-left: 4px
+
+.who
+	padding: 100px 0
+	color: $white
+	overflow: hidden
+	background-color: #222
+	.who_wrapper
+		width: 65%
+		margin: auto
+		position: relative
+		.h2title
+			font-weight: bold
+			font-size: 55px
+			line-height: 76px
+			text-align: center
+			color: #FFFFFF
+			margin-bottom: 40px
+		.main_column
+			display: flex
+			flex-direction: row
+			justify-content: space-between
+			flex-wrap: wrap
+			width: 80%
+			margin: auto
+			margin-bottom: 64px
+			li
+				width: 38%
+				position: relative
+				&:after
+					content: ""
+					position: absolute
+					display: inline-block
+					width: 4px
+					height: 100%
+					background-color: #FFC80A
+					right: -32%
+					top: 0
+				&:before
+					content: url(../img/before_line.png)
+					display: block
+					width: 100%
+					position: absolute
+					right: -32%
+					top: 46px
+					text-align: right
+				&:nth-last-child(odd)
+					&:before
+						display: none
+					&:after
+						content: url(../img/after_line.png)
+						display: block
+						width: 100%
+						position: absolute
+						left: -32%
+						top: 126px
+						text-align: left
+						background-color: transparent
+					.title
+						margin-top: 80px
+					// &:after
+					// 	display: none
+				&:hover
+					.title
+						background-color: #F5F5F5
+						color: #222
+						&:before
+							background-color: transparent
+						&:after
+							background-color: #F5F5F5
+						.number
+						 	color: #212121
+						 	background-color: #FFC80A
+				.title
+					font-weight: bold
+					font-size: 16px
+					line-height: 28px
+					letter-spacing: 1px
+					height: 46px
+					width: 70%
+					background-color: transparent
+					display: flex
+					flex-direction: row
+					align-items: center
+					position: relative
+					border-radius: 4px
+					padding-left: 24px
+					margin-bottom: 16px
+					&:before
+						content: ""
+						position: absolute
+						width: 100%
+						height: 2px
+						bottom: 0
+						left: 0
+						background-color: rgba(245, 245, 245, 0.25)
+					&:after
+						content: ""
+						width: 34px
+						height: 34px
+						position: absolute
+						right: -16px
+						top: 50%
+						margin-top: -17px
+						background-color: transparent
+						z-index: 1
+						transform: rotate(45deg)
+						border-radius: 4px
+					.number
+						position: relative
+						z-index: 2
+						display: inline-block
+						width: 22px
+						height: 22px
+						border-radius: 50%
+						display: flex
+						justify-content: center
+						align-items: center
+						background-color: #E8E9ED
+						margin-right: 16px
+						color:  #9FA3A7
+					.name
+						position: relative
+						z-index: 2
+				.desc
+					font-size: 14px
+					line-height: 16px
+
+	.bottom_block_wrapper
+		position: relative
+		width: 100%
+		height: auto
+		display: flex
+		justify-content: center
+		align-items: center
+		.bet2
+			position: absolute
+			left: 0
+			z-index: 1
+			left: 5%
+		.bet
+			position: absolute
+			right: 0
+			z-index: 3
+			right: 15%
+		.bottom_block
+			width: 50%
+			position: relative
+			z-index: 2
+			.button
+				margin: auto
+			.title
+	.stripe1,
+	.stripe2,
+	.stripe3,
+	.stripe4
+		width: 1px
+		height: 100%
+		background-color: rgba(255, 255, 255, 0.1)
+		position: absolute
+		top: 0
+		left: 20%
+	.stripe2
+		left: 40%
+	.stripe3
+		left: 60%
+	.stripe4
+		left: 80%
+
+.choise_list
+	background: url(../img/choise_list_bg.png)
+	background-size: cover
+	background-position: left center
+	background-repeat: no-repeat
+	width: 100%
+	height: auto
+	padding: 100px 0
+	.choise_list_wrapper
+		width: 65%
+		margin: auto
+		position: relative
+		margin-bottom: 100px
+		.h2title
+			font-weight: bold
+			font-size: 55px
+			line-height: 76px
+			text-align: center
+			color: #222222
+			margin-bottom: 54px
+		.description
+			font-size: 16px
+			line-height: 24px
+			text-align: center
+			letter-spacing: 0.05em
+			color: #222222
+			margin-bottom: 95px
+			.text_blue
+				font-weight: bold
+		.price_list
+			width: 100%
+			margin: auto
+			display: flex
+			flex-direction: row
+			justify-content: center
+			margin-bottom: 32px
+			.price_item
+				background: #F8F8F8
+				box-shadow: 5px 5px 50px rgba(39, 66, 212, 0.15)
+				border-radius: 4px
+				width: 25%
+				padding: 22px 16px
+				position: relative
+				transition: all .5s
+				top: 0
+				&.active
+					top: -40px
+					.button
+						background-color: #F9593A
+						border-color: transparent
+						color: $white
+				&:hover
+					top: -40px
+					.button
+						background-color: #F9593A
+						border-color: transparent
+						color: $white
+				.remark
+					position: absolute
+					top: 8px
+					right: 8px
+					background: #FFC80A
+					border-radius: 4px
+					font-weight: bold
+					font-size: 8px
+					line-height: 10px
+					display: flex
+					align-items: flex-end
+					text-align: center
+					letter-spacing: 1.92px
+					color: #FFFFFF
+					z-index: 2
+					padding: 2px 6px
+				.price_title
+					font-weight: bold
+					font-size: 20px
+					line-height: 32px
+					text-align: center
+					letter-spacing: 0.05em
+					color: #212121
+					white-space: nowrap
+				.price_price
+					font-size: 20px
+					line-height: 24px
+					text-align: center
+					color: #9FA3A7
+					font-family: ArvoRegular
+					.number
+						font-family: ArvoRegular
+						font-size: 74px
+						line-height: 89px
+						color: #212121
+				.price_item_description
+					margin-bottom: 30px
+					li
+						font-size: 20px
+						line-height: 32px
+						color: #979797
+						white-space: nowrap
+						position: relative
+						display: flex
+						flex-direction: row
+						align-items: center
+						border-bottom: 1px solid rgba(151, 151, 151, 0.25)
+						margin-bottom: 4px
+						padding-bottom: 4px
+						&:before
+							content: ""
+							position: relative
+							width: 8px
+							height: 8px
+							background: #FFC80A
+							border-radius: 50%
+							margin-right: 8px
+						&.black_text
+							color: #171717
+				.button
+					margin: auto
+					background-color: transparent
+					border: 1px solid #979797
+					box-sizing: border-box
+					box-shadow: 5px 5px 50px rgba(39, 66, 212, 0.15)
+					text-transform: uppercase
+					color: #979797
+	.bottom_block_wrapper
+		width: 100%
+		height: auto
+		position: relative
+		overflow: hidden
+		padding-top: 180px
+		.people
+			position: absolute
+			top: 0
+			left: 0
+			z-index: 1
+		.bottom_block
+			background: #75BAEA
+			box-shadow: 5px 5px 50px rgba(39, 66, 212, 0.15)
+			border-radius: 16px
+			width: 60%
+			position: relative
+			z-index: 2
+			.title
+			.button
+				background: #F9593A
+				box-shadow: 5px 5px 50px rgba(39, 66, 212, 0.15)
+				margin: auto
+
+.portfolio
+	width: 100%
+	height: auto
+	padding: 100px 0
+	overflow: hidden
+	.portfolio_wrapper
+		width: 65%
+		margin: auto
+		position: relative
+		margin-bottom: 100px
+		.h2title
+			font-weight: bold
+			font-size: 55px
+			line-height: 76px
+			text-align: center
+			color: #171717
+			margin-bottom: 50px
+		.portfolio_list_wrapper
+			width: 100%
+			height: auto
+			display: flex
+			flex-direction: row
+			justify-content: space-between
+			.portfolio_column
+				width: 30%
+				.portfolio_item
+					display: block
+					margin-bottom: 32px
+					&:hover
+						.portfolio_item_description
+							box-shadow: none
+					&.big
+						.portfolio_image_wrapper
+							height: 360px
+					&.small
+						.portfolio_image_wrapper
+							height: 220px
+					.portfolio_image_wrapper
+						width: 100%
+						height: 290px
+						position: relative
+						overflow: hidden
+						display: flex
+						justify-content: center
+						align-items: center
+						.portfolio_image
+							width: 100%
+							height: auto
+							position: absolute
+					.portfolio_item_description
+						font-size: 16px
+						line-height: 24px
+						text-align: center
+						letter-spacing: 0.05em
+						color: #171717
+						padding: 16px 24px
+						background: #FFFFFF
+						box-shadow: 5px 5px 50px rgba(39, 66, 212, 0.15)
+						border-radius: 8px
+	.bottom_block_wrapper
+		.folders
+			position: absolute
+			left: 0
+			z-index: 1
+		.bottom_block
+			width: 60%
+			padding: 40px 80px
+			z-index: 2
+			position: relative
+			.title
+			.button
+				margin: auto
+
+.faq
+	background-color: #130F28
+	padding: 100px 0
+	overflow: hidden
+	color: $white
+	.faq_wrapper
+		width: 65%
+		margin: auto
+		height: auto
+		margin-bottom: 64px
+		.h2title
+			font-weight: bold
+			font-size: 55px
+			line-height: 76px
+			text-align: center
+			margin-bottom: 64px
+		.faq_list_wrapper
+			width: 100%
+			height: auto
+			.faq_item
+				width: 100%
+				height: auto
+				display: flex
+				flex-direction: row
+				justify-content: space-between
+				margin-bottom: 16px
+				cursor: pointer
+				&.active
+					.content
+						.desc
+							display: block
+					.arrows
+						.minus
+							right: 0
+						.plus 
+							right: -100px
+				.number
+					font-weight: bold
+					font-size: 55px
+					color: rgba(117, 186, 234, 0.25)
+					width: 10%
+					height: 100%
+					display: flex
+					justify-content: center
+					align-items: center
+				.content
+					border-bottom: 2px solid rgba(159, 163, 167, 0.25)
+					width: 85%
+					.title
+						font-weight: bold
+						font-size: 18px
+						line-height: 24px
+						letter-spacing: 0.05em
+						color: #75BAEA
+						padding: 16px 0 32px
+						display: flex
+						align-items: center
+					.desc
+						font-size: 16px
+						line-height: 24px
+						letter-spacing: 0.05em
+						padding-bottom: 16px
+						display: none
+				.arrows
+					width: 5%
+					position: relative
+					display: flex
+					justify-content: center
+					align-items: flex-start
+					cursor: pointer
+					padding-top: 22px
+					overflow: hidden
+					.minus
+						position: absolute
+						right: -100px
+						transition: all .5s
+					.plus 
+						position: absolute
+						right: 0
+						transition: all .5s
+	.bottom_block_wrapper
+		width: 60%
+		margin: auto
+		.bottom_block
+			width: 100%
+			background: #75BAEA
+			box-shadow: 5px 5px 50px rgba(39, 66, 212, 0.15)
+			padding: 32px 64px
+			.title
+			.button
+				background: #F9593A
+				box-shadow: 5px 5px 50px rgba(39, 66, 212, 0.15)
+				margin: auto
+
+
+.footer
+	width: 100%
+	height: auto
+	padding: 16px 0 32px
+	background-color: #222
+	color: $white
+	.footer_wrapper
+		width: 65%
+		margin: auto
+		display: flex
+		flex-direction: row
+		align-items: center
+		justify-content: space-around
+		.footer_logo_wrapper
+			width: 20%
+			display: flex
+			justify-content: center
+			.footer_logo
+		.footer_center_column
+			width: 20%
+			display: flex
+			flex-direction: column
+			align-items: center
+			.footer_number
+				display: block
+				font-weight: bold
+				font-size: 18px
+				line-height: 22px
+				margin-bottom: 32px
+			.footer_button
+				border: 1px solid #FFFFFF
+				box-sizing: border-box
+				border-radius: 4px
+				font-size: 16px
+				line-height: 22px
+				text-align: center
+				border-radius: 4px
+				width: 212px
+				height: 48px
+				display: flex
+				justify-content: center
+				align-items: center
+				position: relative
+				cursor: pointer
+				&:after
+					content: ""
+					width: 1px
+					height: 36px
+					position: absolute
+					right: -1px
+					top: 50%
+					margin-top: -18px
+					background-color: #222
+					z-index: 1
+				.footer_icon_phone
+					position: absolute
+					right: -20px
+					z-index: 2
+		.right_column
+			width: 20%
+			display: flex
+			flex-direction: column
+			align-items: center
+			.footer_socline
+				display: flex
+				flex-direction: row
+				align-items: center
+				justify-content: space-between
+				margin-bottom: 32px
+				li
+					margin: 0 16px
+					a
+						img
+							&:hover
+								background-color: rgba(#75BAEA, .7)
+								border-radius: 6px
+			.site_link
+				font-weight: bold
+				font-size: 18px
+				line-height: 22px
+				color: #75BAEA
+
+.section_counter
+	display: flex
+	flex-direction: column
+	align-items: flex-end
+	justify-content: center
+	position: fixed
+	top: 0
+	right: 10%
+	width: 50px
+	height: 100vh
+	z-index: 100
+	li
+		font-weight: bold
+		font-size: 12px
+		line-height: 15px
+		color: #9FA3A7
+		margin-bottom: 14px
+		position: relative
+		width: 20px
+		display: flex
+		justify-content: flex-end
+		align-items: center
+		&:after
+			content: ""
+			position: absolute
+			left: -20px
+			width: 7px
+			height: 2px
+			background-color: #9FA3A7
+			transition: all .5s
+		&.currient_page
+			&:after
+				width: 20px
+				background-color: #FFC80A
+
+.page_404
+	background-color: $color
+	height: 100vh
+	color: $white
+	display: flex
+	justify-content: center
+	align-items: center
+	flex-direction: column
+	text-align: center
+	padding: 0 2.5%
+	h1
+		font-size: 42px
+		font-weight: bold
+		margin-bottom: 16px
+		display: block
+	.description
+		font-size: 20px
+		margin-bottom: 46px
+	.button
+
+
+@import "media" // Always at the end
