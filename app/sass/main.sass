@@ -145,11 +145,19 @@ section, header
 						margin-right: 16px
 						&:last-child
 							margin-right: 0
+						&:hover
+							a
+								img
+									&.nohov
+										display: none
+									&.hov
+										display: block
 						a
 							img
-								&:hover
-									background-color: rgba(#75BAEA, .7)
-									border-radius: 6px
+								&.nohov
+									display: block
+								&.hov
+									display: none
 			.right_wrapper
 				display: flex
 				flex-direction: column
@@ -693,6 +701,8 @@ section, header
 				height: 48px
 				background: #F9593A
 				box-shadow: 5px 5px 50px rgba(39, 66, 212, 0.15)
+				&:hover
+					background-color: #FF8068
 		.clock
 			position: absolute
 			bottom: 0
@@ -843,6 +853,8 @@ section, header
 			height: 48px
 			box-shadow: 5px 5px 50px rgba(39, 66, 212, 0.15)
 			margin: 0 auto 90px
+			&:hover
+				opacity: .8
 
 .bottom_block
 	width: 80%
@@ -868,6 +880,9 @@ section, header
 		justify-content: center
 		align-items: center
 		margin-bottom: 0 !important
+		&:hover
+			background-color: #08c
+			opacity: 1 !important
 
 .airoplane_wrapper
 	position: absolute
@@ -953,6 +968,8 @@ section, header
 				background: #F9593A
 				box-shadow: 5px 5px 50px rgba(39, 66, 212, 0.15)
 				margin: auto
+				&:hover
+					background-color: #FF8068
 				b
 					font-weight: bold
 					margin-left: 4px
@@ -1271,6 +1288,8 @@ section, header
 				background: #F9593A
 				box-shadow: 5px 5px 50px rgba(39, 66, 212, 0.15)
 				margin: auto
+				&:hover
+					background-color: #FF8068 !important
 
 .portfolio
 	width: 100%
@@ -1438,6 +1457,8 @@ section, header
 				background: #F9593A
 				box-shadow: 5px 5px 50px rgba(39, 66, 212, 0.15)
 				margin: auto
+				&:hover
+					background-color: #FF8068
 
 
 .footer
@@ -1511,11 +1532,18 @@ section, header
 				margin-bottom: 32px
 				li
 					margin: 0 16px
+					&:hover
+						a
+							img
+								&.nohov
+									display: none
+								&.hov
+									display: block
 					a
 						img
-							&:hover
-								background-color: rgba(#75BAEA, .7)
-								border-radius: 6px
+							display: block
+							&.hov
+								display: none
 			.site_link
 				font-weight: bold
 				font-size: 18px
